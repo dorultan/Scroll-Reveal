@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event handling</title>
+ <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+ <h1>Event handling</h1>
+ <a href="#" class="a" atr="should">Click this button</a>
+ <a href="#" class="a" atr="should not">Click this second button</a>
+
+<script type="text/javascript">
+ $('.a').on('click', first, second);
+
+ function first(a ) {
+ 	var should;
+ 	var array = [];
+ 	if(array[0] !== 'Simson') {
+		should = true;
+		$(this.target).off('click');
+	}
+
+ 	return {
+ 		should: should,
+ 		array: array
+ 	};
+ }
+
+ function second(event) {
+ 	var b = 'boo';
+ 	var ar = event.data().array.push('Simson') ;
+
+ 	return b;
+ }
+
+</script>
+</body>
+</html>
