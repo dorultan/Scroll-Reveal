@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scroll on ... Reveal</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+ <div class="header">
+  <h1>Scroll on ... magic will happen !</h1>
+ </div>
+ <section class="section1">
+  <div class="flex-row">	
+   <div class="flex-col">
+    <div class="item square">
+     <h2>I'm just fading ...</h2>
+    </div>
+   </div>	
+   <div class="flex-col">
+    <div class="item star">
+     <h2>I'm just rotating</h2>
+    </div>
+   </div>	
+   <div class="flex-col">
+    <div class="item square">
+     <h2>I'm just fading ...</h2>
+    </div>
+   </div>
+  </div>
+  <div class="flex-row">	
+   <div class="flex-col">
+    <div class="item cross">
+     <h2>I'm just fading ...</h2>
+    </div>
+   </div>	
+   <div class="flex-col">
+    <div class="item circle">
+     <h2>I'm just rotating</h2>
+    </div>
+   </div>	
+   <div class="flex-col">
+    <div class="item polygon">
+     <h2>I'm just fading ...</h2>
+    </div>
+   </div>
+  </div>
+  <div class="flex-row">	
+   <div class="flex-col">
+    <div class="item triangle">
+     <h2>I'm just fading ...</h2>
+    </div>
+   </div>	
+   <div class="flex-col">
+    <div class="item square">
+     <h2>I'm just rotating</h2>
+    </div>
+   </div>	
+   <div class="flex-col">
+    <div class="item star">
+     <h2>I'm just fading ...</h2>
+    </div>
+   </div>
+  </div>
+  <div class="flex-row">
+   <div class="flex-col">
+   	<h1>Thank you for checking this out.</h1>
+   	<a href="http://dorultanianos.me">Check me out !</a>
+   </div>
+  </div>
+ </section>
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+ <script type="text/javascript" src="./js/ScrollOnReveal.js"></script>
+ <script type="text/javascript">
+ 	$('.circle').ScrollOnReveal();
+ 	$('.cross').ScrollOnReveal({
+ 		beforeCss: {
+ 			'left': '-400px'
+ 		},
+ 		animatedCss: {
+ 			'left': '0px'
+ 		}
+ 	})
+
+ 	$('.triangle').ScrollOnReveal({
+ 		beforeCss: {
+ 			'transform': 'rotate(360deg)' 
+ 		},
+
+ 		animatedCss: {
+ 			transform: 'rotate(0deg)'
+ 		}
+ 	})
+
+ 	$('.polygon').ScrollOnReveal({
+ 		beforeCss: {
+ 			'right': "-400px",
+ 			'opacity': '0'
+ 		},
+
+ 		animatedCss: {
+ 			right: "0px",
+ 			opacity: "1"
+ 		},
+ 		speed: 500
+ 	})
+
+ 	$('.square').ScrollOnReveal({
+ 		beforeCss: {
+ 			transform: 'skewY(20deg)'
+ 		},
+ 		animatedCss: {
+ 			transform: 'skewY(0deg)'
+ 		},
+ 		speed: 500
+ 	})
+
+ 	$('.star').ScrollOnReveal({
+ 		beforeCss: {
+ 			transform: 'rotate(480deg)',
+ 			opacity: '0'
+ 		},
+ 		animatedCss: {
+ 			transform: 'rotate(0deg)',
+ 			opacity: '1'
+ 		}
+ 	})
+ </script>
+</body>
+</html>
