@@ -1,2 +1,3 @@
 # Scroll-Reveal
-My first scroll reveal plugin
+
+This is a jquery scroll animation plugin.
